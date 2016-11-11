@@ -8,9 +8,9 @@
 
 import UIKit
 
-public typealias RPDatePickerValueChanged = (_ datePicker: RPDatePicker, _ date: Date) -> Void
+public typealias CNDatePickerValueChanged = (_ datePicker: CNDatePicker, _ date: Date) -> Void
 
-open class RPDatePicker: UIPickerView {
+open class CNDatePicker: UIPickerView {
     
     fileprivate let maxRowCount = 500
     fileprivate let dayCount = 31
@@ -23,7 +23,7 @@ open class RPDatePicker: UIPickerView {
     open var month: Int = 1
     open var day: Int = 1
     
-    open var valueChenged: RPDatePickerValueChanged?
+    open var valueChanged: CNDatePickerValueChanged?
     
     open var date: Date {
         var dc = DateComponents()
@@ -55,7 +55,7 @@ open class RPDatePicker: UIPickerView {
         s = (maxRowCount / 2 / yearCount) * yearCount
         selectRow(s + year - 1900, inComponent: 2, animated: animated)
         
-        valueChenged?(self, date)
+        valueChanged?(self, date)
     }
     
     func initialization() {
@@ -81,7 +81,7 @@ open class RPDatePicker: UIPickerView {
     
 }
 
-extension RPDatePicker: UIPickerViewDataSource {
+extension CNDatePicker: UIPickerViewDataSource {
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -93,7 +93,7 @@ extension RPDatePicker: UIPickerViewDataSource {
     
 }
 
-extension RPDatePicker: UIPickerViewDelegate {
+extension CNDatePicker: UIPickerViewDelegate {
     
     public func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         switch component {
