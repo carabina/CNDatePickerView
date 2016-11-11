@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7804271B1DD618BF00878F72 /* CNDatePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 780427191DD618BF00878F72 /* CNDatePickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		780427221DD618CC00878F72 /* CNDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780427211DD618CC00878F72 /* CNDatePickerView.swift */; };
+		780427251DD6197700878F72 /* CNDatePickerView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 780427241DD6197700878F72 /* CNDatePickerView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		780427161DD618BF00878F72 /* CNDatePickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CNDatePickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		780427191DD618BF00878F72 /* CNDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNDatePickerView.h; sourceTree = "<group>"; };
 		7804271A1DD618BF00878F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		780427211DD618CC00878F72 /* CNDatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNDatePickerView.swift; sourceTree = "<group>"; };
+		780427241DD6197700878F72 /* CNDatePickerView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CNDatePickerView.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXGroup;
 			children = (
 				780427181DD618BF00878F72 /* CNDatePickerView */,
+				780427231DD6194C00878F72 /* Supporting Files */,
 				780427171DD618BF00878F72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,9 +51,19 @@
 		780427181DD618BF00878F72 /* CNDatePickerView */ = {
 			isa = PBXGroup;
 			children = (
+				780427211DD618CC00878F72 /* CNDatePickerView.swift */,
+			);
+			path = CNDatePickerView;
+			sourceTree = "<group>";
+		};
+		780427231DD6194C00878F72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				780427241DD6197700878F72 /* CNDatePickerView.podspec */,
 				780427191DD618BF00878F72 /* CNDatePickerView.h */,
 				7804271A1DD618BF00878F72 /* Info.plist */,
 			);
+			name = "Supporting Files";
 			path = CNDatePickerView;
 			sourceTree = "<group>";
 		};
@@ -95,6 +110,7 @@
 				TargetAttributes = {
 					780427151DD618BF00878F72 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -121,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780427251DD6197700878F72 /* CNDatePickerView.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780427221DD618CC00878F72 /* CNDatePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +257,7 @@
 		7804271F1DD618BF00878F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -250,6 +269,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.complexnumbers.CNDatePickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -257,6 +277,7 @@
 		780427201DD618BF00878F72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
